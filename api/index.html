@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API</title>
+    </head>
+    <body>
+        <h1>Video Player</h1>
+        <video id="videoplayer" width="600" controls></video>
+        <script>
+                        const VideoID = '1'; // Set the ID of the video you want to display
+
+                         async function fetchVideoURL(VideoID) {
+                try {
+                    const response = await fetch(`http://192.168.1.5:8080/video_lessons/${VideoID}`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch video URL');
+                    }
+                    const data = await response.json();
+                    const videoplayer = document.getElementById('videoplayer');
+                    videoplayer.src = data.url; // Set the src attribute of video element
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+fetchVideoURL(VideoID);
+        </script>
+    </body>
+</html>

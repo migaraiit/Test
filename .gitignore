@@ -1,0 +1,38 @@
+# Flutter/Dart specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+flutter_assets/
+ios/Pods/
+macos/Pods/
+web/packages/
+android/.gradle/
+android/app/build/
+android/build/
+ios/Flutter/.last_build_id
+ios/Podfile.lock
+ios/Pods/
+.vscode/ # if you use Visual Studio Code
+*.iml
+*.log
+*.flutter-plugins
+*.flutter-plugins-dependencies
+
+# IntelliJ IDEA/Android Studio specific
+.idea/
+*.iml
+*.ipr
+*.iws
+*.bak/
+*.idea/workspace.xml
+*.idea/tasks.xml
+*.idea/dictionaries
+
+# Android specific
+android/local.properties
+
+# macOS specific
+.DS_Store
